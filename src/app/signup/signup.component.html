@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <form class="form-signin">       
+    <h2 class="form-signin-heading">Please login</h2>
+    <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+    <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
+    <label class="checkbox">
+      <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+    </label>
+    <a class="btn btn-primary btn-lg btn-block" (click)="login(inputName, inputPassword, '','../assets/img/default.png')">Login</a>
+    <a class="btn btn-primary btn-lg btn-block" (click)="loginFB()">Log in with FB</a>
+  <a  a routerLink="/" type="button" class="btn btn-primary btn-lg btn-block" value="Singup" onclick="location.href">Singup </a>
+  </form>
+  </div>
+              <div class="col-md-7">
+                <!-- <div align="center" class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="true"
+                    data-auto-logout-link="false" data-use-continue-as="false" (click)="loginFB()"></div> -->
+              </div>

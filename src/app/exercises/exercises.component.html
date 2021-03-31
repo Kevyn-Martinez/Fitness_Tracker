@@ -1,0 +1,65 @@
+<div class="container">
+  
+  <div class="jumbotron">
+    <div class="card-deck">
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="assets/img/flies.gif" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Flies</h4>
+          <p class="card-text text-center">Flies helps you develope your chest, arms, back and shoulders at the same time.</p>
+        </div>
+        <div class="card-body text-center">
+          <a (click)="AddToDone('Flies', 0, 0)" id="Adding1" class="btn btn-primary">Add to Done</a>
+        </div>
+
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="assets/img/bench-press.gif" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Bench Press</h4>
+          <p class="card-text text-center">Bench Press is great to build your chest.</p>
+        </div>
+        <div class="card-body text-center">
+          <a (click)="AddToDone('Bench Press', 0, 0)" id="Adding2" class="btn btn-primary">Add to Done</a>
+        </div>
+
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="assets/img/incline-bench-press.gif" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Incline Bench Press</h4>
+          <p class="card-text text-center">Incline bench press help you build your upper chest and tone your upper body.</p>
+        </div>
+        <div class="card-body text-center">
+          <a (click)="AddToDone('Incline Bench Press', 0, 0)" id="Adding3" class="btn btn-primary">Add to Done</a>
+        </div>
+      </div>
+      <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="assets/img/BicepCurl.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Bicep Curls</h4>
+          <p class="card-text text-center">Bicep curls developes your biceps and tone up your muscles.</p>
+        </div>
+        <div class="card-body text-center">
+          <a (click)="AddToDone('Bicep Curls', 0, 0)" id="Adding4" class="btn btn-primary">Add to Done</a>
+        </div>
+
+      </div>
+    </div>
+    <h1 class="display-3"></h1>
+    <div class="row" [@my-Exercises-Effects]="this.me.myExercises.length">
+      <div class="col-md-12 ">
+        <div class="card text-center">
+          <div class="card-header align-content-center">
+            My finished Exercisess
+          </div>
+          <ul class="list-group list-group-flush ">
+            <li *ngFor="let x of this.me.myExercises; index as i" class="list-group-item" (click)="removeFromMyExercises(x)">
+              <span title="Click to remove">{{x.name}}</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+     
+    </div>
+  </div>
